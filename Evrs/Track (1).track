@@ -1,0 +1,138 @@
+{
+  "ForceStart": false,
+  "Timeline": [
+    {
+      "Name": "SerialSend",
+      "ClassId": "HutongGames.PlayMaker.Actions.SerialSend",
+      "IsBreakpoint": false,
+      "ColorIndex": 0,
+      "StartTime": 0.0,
+      "StopTime": 0.5,
+      "signalOnStop": false,
+      "signalOnStart": false
+    },
+    {
+      "Name": "SetAnimatorFloat",
+      "ClassId": "HutongGames.PlayMaker.Actions.SetAnimatorFloat",
+      "IsBreakpoint": false,
+      "ColorIndex": 0,
+      "StartTime": 3.33,
+      "StopTime": 6.33,
+      "signalOnStop": false,
+      "signalOnStart": false
+    },
+    {
+      "Name": "SetAnimatorFloat",
+      "ClassId": "HutongGames.PlayMaker.Actions.SetAnimatorFloat",
+      "IsBreakpoint": false,
+      "ColorIndex": 0,
+      "StartTime": 6.33,
+      "StopTime": 6.53,
+      "signalOnStop": false,
+      "signalOnStart": false
+    },
+    {
+      "Name": "SetAnimatorFloat",
+      "ClassId": "HutongGames.PlayMaker.Actions.SetAnimatorFloat",
+      "IsBreakpoint": false,
+      "ColorIndex": 0,
+      "StartTime": 9.0,
+      "StopTime": 12.0,
+      "signalOnStop": false,
+      "signalOnStart": false
+    },
+    {
+      "Name": "SetAnimatorFloat",
+      "ClassId": "HutongGames.PlayMaker.Actions.SetAnimatorFloat",
+      "IsBreakpoint": false,
+      "ColorIndex": 0,
+      "StartTime": 12.0,
+      "StopTime": 12.2,
+      "signalOnStop": false,
+      "signalOnStart": false
+    },
+    {
+      "Name": "SetAnimatorFloat",
+      "ClassId": "HutongGames.PlayMaker.Actions.SetAnimatorFloat",
+      "IsBreakpoint": false,
+      "ColorIndex": 0,
+      "StartTime": 14.6,
+      "StopTime": 17.6,
+      "signalOnStop": false,
+      "signalOnStart": false
+    },
+    {
+      "Name": "SetAnimatorFloat",
+      "ClassId": "HutongGames.PlayMaker.Actions.SetAnimatorFloat",
+      "IsBreakpoint": false,
+      "ColorIndex": 0,
+      "StartTime": 17.6,
+      "StopTime": 17.8,
+      "signalOnStop": false,
+      "signalOnStart": false
+    },
+    {
+      "Name": "SetAnimatorBool",
+      "ClassId": "HutongGames.PlayMaker.Actions.SetAnimatorBool",
+      "IsBreakpoint": false,
+      "ColorIndex": 0,
+      "StartTime": 21.938,
+      "StopTime": 22.1,
+      "signalOnStop": false,
+      "signalOnStart": false
+    },
+    {
+      "Name": "SetAnimatorBool",
+      "ClassId": "HutongGames.PlayMaker.Actions.SetAnimatorBool",
+      "IsBreakpoint": false,
+      "ColorIndex": 0,
+      "StartTime": 22.104,
+      "StopTime": 22.245,
+      "signalOnStop": false,
+      "signalOnStart": false
+    },
+    {
+      "Name": "SetAnimatorFloat",
+      "ClassId": "HutongGames.PlayMaker.Actions.SetAnimatorFloat",
+      "IsBreakpoint": false,
+      "ColorIndex": 0,
+      "StartTime": 26.3,
+      "StopTime": 29.3,
+      "signalOnStop": false,
+      "signalOnStart": false
+    },
+    {
+      "Name": "SetAnimatorFloat",
+      "ClassId": "HutongGames.PlayMaker.Actions.SetAnimatorFloat",
+      "IsBreakpoint": false,
+      "ColorIndex": 0,
+      "StartTime": 29.3,
+      "StopTime": 29.5,
+      "signalOnStop": false,
+      "signalOnStart": false
+    },
+    {
+      "Name": "SetAnimatorFloat",
+      "ClassId": "HutongGames.PlayMaker.Actions.SetAnimatorFloat",
+      "IsBreakpoint": false,
+      "ColorIndex": 0,
+      "StartTime": 31.784,
+      "StopTime": 34.784,
+      "signalOnStop": false,
+      "signalOnStart": false
+    },
+    {
+      "Name": "SetAnimatorFloat",
+      "ClassId": "HutongGames.PlayMaker.Actions.SetAnimatorFloat",
+      "IsBreakpoint": false,
+      "ColorIndex": 0,
+      "StartTime": 35.1,
+      "StopTime": 35.1,
+      "signalOnStop": false,
+      "signalOnStart": false
+    }
+  ],
+  "Duration": 60.0,
+  "StartEventName": "",
+  "FinishEventName": ""
+}
