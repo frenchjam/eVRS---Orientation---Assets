@@ -119,3 +119,6 @@ MonoBehaviour:
   - Clear Finger Contacts
   - Open Hand Command
   - Close Hand Command
+  - CloseGrip
+  - CloseHand
+  - StartClosing
