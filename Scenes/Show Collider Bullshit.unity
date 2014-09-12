@@ -664,8 +664,8 @@ MonoBehaviour:
   down: 274
   left: 119
   right: 120
-  inward: 113
-  outward: 115
+  inward: 0
+  outward: 0
 --- !u!114 &937261816
 MonoBehaviour:
   m_ObjectHideFlags: 0
