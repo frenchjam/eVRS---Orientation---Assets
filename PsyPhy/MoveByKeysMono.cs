@@ -74,7 +74,7 @@ public class MoveByKeysMono : MonoBehaviour
 			if (Input.GetKey (outward)) this.transform.Rotate (k_vector, - rotateSpeed * Time.deltaTime, Space.Self);
 			if ( use_mouse ) {	
 				delta_x = Input.mousePosition.x - previous_mouse_x;	
-				this.transform.Rotate ( k_vector, delta_x / 50.0f, Space.Self );	
+				this.transform.Rotate ( k_vector, delta_x / 20.0f, Space.Self );	
 			}
 		} else {
 			if (Input.GetKey (left) ) this.transform.Translate (- translateSpeed * Time.deltaTime * i_vector, Space.Self);
