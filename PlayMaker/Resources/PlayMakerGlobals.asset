@@ -125,3 +125,6 @@ MonoBehaviour:
   - ContactMade
   - CLose Hand
   - Open Hand
+  - Grasp Collision Detected
+  - Grasp Closing Detected
+  - Grasp Opening Detected
