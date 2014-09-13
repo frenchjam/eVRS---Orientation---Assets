@@ -122,3 +122,4 @@ MonoBehaviour:
   - CloseGrip
   - CloseHand
   - StartClosing
+  - ContactMade
