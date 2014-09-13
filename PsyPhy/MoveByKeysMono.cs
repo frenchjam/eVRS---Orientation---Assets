@@ -22,8 +22,8 @@ public class MoveByKeysMono : MonoBehaviour
 	public KeyCode outward = KeyCode.S;
 
 	public bool use_mouse = false;
-	public float previous_mouse_x;
-	public float previous_mouse_y;
+	private float previous_mouse_x;
+	private float previous_mouse_y;
 
 
 	// These probably exist as globals or elements of some class, but I don't know where.
@@ -37,7 +37,7 @@ public class MoveByKeysMono : MonoBehaviour
 
 	private bool stillDown = false;
 	
-	private float delta_x, delta_y;
+	private float delta_x, delta_y, delta_z;
 	
 	void Update ()
 	{ 
@@ -74,7 +74,13 @@ public class MoveByKeysMono : MonoBehaviour
 			if (Input.GetKey (outward)) this.transform.Rotate (k_vector, - rotateSpeed * Time.deltaTime, Space.Self);
 			if ( use_mouse ) {	
 				delta_x = Input.mousePosition.x - previous_mouse_x;	
-				this.transform.Rotate ( k_vector, delta_x / 20.0f, Space.Self );	
+				delta_y = Input.mousePosition.y - previous_mouse_y;	
+				delta_z = .707f * ( delta_x + delta_y );
+				if ( Input.GetKey( KeyCode.Mouse0 ) ) this.transform.Rotate ( k_vector, delta_z / 5.0f, Space.Self );	
+				else {
+					this.transform.Rotate ( j_vector, delta_x / 20.0f, Space.Self );
+					this.transform.Rotate ( i_vector, delta_y / 20.0f, Space.Self );
+				}
 			}
 		} else {
 			if (Input.GetKey (left) ) this.transform.Translate (- translateSpeed * Time.deltaTime * i_vector, Space.Self);
@@ -83,11 +89,15 @@ public class MoveByKeysMono : MonoBehaviour
 			if (Input.GetKey (down) ) this.transform.Translate (- translateSpeed * Time.deltaTime * j_vector, Space.Self);
 			if (Input.GetKey (inward)) this.transform.Translate (- translateSpeed * Time.deltaTime * k_vector, Space.Self);
 			if (Input.GetKey (outward) ) this.transform.Translate (translateSpeed * Time.deltaTime * k_vector, Space.Self);
-			delta_x = Input.mousePosition.x - previous_mouse_x;	
-			delta_y = Input.mousePosition.y - previous_mouse_y;	
 			if ( use_mouse ) {	
-				this.transform.Translate ( delta_x / 100.0f * i_vector, Space.Self );	
-				this.transform.Translate ( delta_y / 100.0f * j_vector, Space.Self );
+				delta_x = Input.mousePosition.x - previous_mouse_x;	
+				delta_y = Input.mousePosition.y - previous_mouse_y;	
+				delta_z = .707f * ( delta_x + delta_y );
+				if ( Input.GetKey( KeyCode.Mouse0 ) ) this.transform.Translate ( delta_x / 100.0f * k_vector, Space.Self );	
+				else {
+					this.transform.Translate ( delta_x / 100.0f * i_vector, Space.Self );	
+					this.transform.Translate ( delta_y / 100.0f * j_vector, Space.Self );
+				}
 			}
 		}
 		
