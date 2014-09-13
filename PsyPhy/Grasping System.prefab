@@ -162,9 +162,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 400018}
   - 54: {fileID: 5400004}
-  - 114: {fileID: 11400006}
-  - 114: {fileID: 11400008}
   - 135: {fileID: 13500004}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: Grasp Hand
   m_TagString: Hand
@@ -402,7 +401,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.400000006, y: 0, z: -.200000003}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -1049,6 +1048,9 @@ MonoBehaviour:
   right: 120
   inward: 0
   outward: 0
+  use_mouse: 0
+  previous_mouse_x: 0
+  previous_mouse_y: 0
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1515,42 +1517,103 @@ MonoBehaviour:
   m_GameObject: {fileID: 100018}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28d8290177a4b4289bcff160e6b2a0c1, type: 3}
+  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  translateSpeed: .200000003
-  rotateSpeed: 15
-  Shift: 1
-  Control: 0
-  mode: 1
-  up: 0
-  down: 0
-  left: 120
-  right: 119
-  inward: 105
-  outward: 44
---- !u!114 &11400008
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28d8290177a4b4289bcff160e6b2a0c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  translateSpeed: 2
-  rotateSpeed: 15
-  Shift: 1
-  Control: 0
-  mode: 0
-  up: 0
-  down: 0
-  left: 0
-  right: 0
-  inward: 113
-  outward: 115
+  fsm:
+    usedInTemplate: {fileID: 0}
+    name: FSM
+    startState: Drive with VRPN
+    states:
+    - name: Drive with VRPN
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 50
+        y: 100
+        width: 120
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.VRPNSurrogate
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 15a48f3c
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        byteData: 0101
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 14000000130000000100000001000000
+        paramName:
+        - gameObject
+        - vrpnObject
+        - DrivePosition
+        - DriveRotation
+        paramDataPos: 00000000000000000000000001000000
+        paramByteDataSize: 00000000000000000100000001000000
+    events: []
+    globalTransitions: []
+    variables:
+      floatVariables: []
+      intVariables: []
+      boolVariables: []
+      stringVariables: []
+      vector2Variables: []
+      vector3Variables: []
+      colorVariables: []
+      rectVariables: []
+      quaternionVariables: []
+      gameObjectVariables: []
+      objectVariables: []
+      materialVariables: []
+      textureVariables: []
+    description: 
+    docUrl: 
+    showStateLabel: 1
+    maxLoopCount: 0
+    watermark: 
+    version: 0
+    ExposedEvents: []
+    RestartOnEnable: 1
+    EnableDebugFlow: 0
+    StepFrame: 0
+    activeStateName: 
+  fsmTemplate: {fileID: 0}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1573,6 +1636,9 @@ MonoBehaviour:
   right: 120
   inward: 0
   outward: 0
+  use_mouse: 0
+  previous_mouse_x: 0
+  previous_mouse_y: 0
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1866,6 +1932,9 @@ MonoBehaviour:
   right: 120
   inward: 0
   outward: 0
+  use_mouse: 0
+  previous_mouse_x: 0
+  previous_mouse_y: 0
 --- !u!114 &11400016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2159,6 +2228,9 @@ MonoBehaviour:
   right: 120
   inward: 0
   outward: 0
+  use_mouse: 0
+  previous_mouse_x: 0
+  previous_mouse_y: 0
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2452,6 +2524,9 @@ MonoBehaviour:
   right: 120
   inward: 0
   outward: 0
+  use_mouse: 0
+  previous_mouse_x: 0
+  previous_mouse_y: 0
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1
