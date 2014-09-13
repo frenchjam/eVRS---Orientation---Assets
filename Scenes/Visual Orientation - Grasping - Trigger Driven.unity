@@ -5801,7 +5801,8 @@ MonoBehaviour:
       objectVariables: []
       materialVariables: []
       textureVariables: []
-    description: 
+    description: Drives the simulation through the different steps of the expeirment
+      paradigm.
     docUrl: 
     showStateLabel: 1
     maxLoopCount: 0
@@ -5976,9 +5977,9 @@ MonoBehaviour:
   _track: {fileID: 833833054}
   _position:
     serializedVersion: 2
-    x: 249.764145
+    x: 231.0849
     y: 127
-    width: 732.641479
+    width: 677.848999
     height: 36
   colorIndex: 0
   _startTime: 1.5
@@ -5989,7 +5990,7 @@ MonoBehaviour:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100000, guid: c89db826f3be944fcb1e5d2cae3c5fe2, type: 2}
-  m_PrefabInternal: {fileID: 2110512634}
+  m_PrefabInternal: {fileID: 2099043994}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 318113432}
@@ -6006,7 +6007,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400000, guid: c89db826f3be944fcb1e5d2cae3c5fe2, type: 2}
-  m_PrefabInternal: {fileID: 2110512634}
+  m_PrefabInternal: {fileID: 2099043994}
   m_GameObject: {fileID: 318113430}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -6019,7 +6020,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: c89db826f3be944fcb1e5d2cae3c5fe2,
     type: 2}
-  m_PrefabInternal: {fileID: 2110512634}
+  m_PrefabInternal: {fileID: 2099043994}
   m_GameObject: {fileID: 318113430}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -6028,7 +6029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fsm:
     usedInTemplate: {fileID: 0}
-    name: FSM
+    name: Raise/Lower Hand
     startState: State 4
     states:
     - name: State 4
@@ -6037,7 +6038,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 99
-        y: 104
+        y: 108
         width: 100
         height: 48
       isBreakpoint: 0
@@ -6104,7 +6105,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 159
-        y: 172
+        y: 176
         width: 100
         height: 32
       isBreakpoint: 0
@@ -6208,7 +6209,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 63
-        y: 232
+        y: 236
         width: 100
         height: 32
       isBreakpoint: 0
@@ -6331,7 +6332,11 @@ MonoBehaviour:
       objectVariables: []
       materialVariables: []
       textureVariables: []
-    description: 
+    description: 'This is a hack for the eVRS Orientation paradigms. We simulate the
+      movement of the 3D sensor attached to the hand with keyboard and mouse inputs.
+      This FSM adds a pre-programmed movement toward the center point or straight
+      down to a point outside the field of view: ''R'' to raise the arm, ''L'' to
+      lower it.'
     docUrl: 
     showStateLabel: 1
     maxLoopCount: 0
@@ -6348,7 +6353,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400002, guid: c89db826f3be944fcb1e5d2cae3c5fe2,
     type: 2}
-  m_PrefabInternal: {fileID: 2110512634}
+  m_PrefabInternal: {fileID: 2099043994}
   m_GameObject: {fileID: 318113430}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -8775,9 +8780,9 @@ MonoBehaviour:
   _track: {fileID: 833833055}
   _position:
     serializedVersion: 2
-    x: 1332.07544
+    x: 1232.45276
     y: 79.5
-    width: 166.509399
+    width: 154.056641
     height: 36
   colorIndex: 0
   _startTime: 8
@@ -9153,7 +9158,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 127
-    width: 1765
+    width: 1633
     height: 36
   InstanceNumber: 3
 --- !u!114 &833833055
@@ -9896,7 +9901,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 79.5
-    width: 1765
+    width: 1633
     height: 36
   InstanceNumber: 2
 --- !u!114 &833833056
@@ -10243,7 +10248,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 32
-    width: 1765
+    width: 1633
     height: 36
   InstanceNumber: 1
 --- !u!4 &833833057
@@ -10799,7 +10804,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100002, guid: c89db826f3be944fcb1e5d2cae3c5fe2, type: 2}
-  m_PrefabInternal: {fileID: 2110512634}
+  m_PrefabInternal: {fileID: 2099043994}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 904189440}
@@ -10814,7 +10819,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400002, guid: c89db826f3be944fcb1e5d2cae3c5fe2, type: 2}
-  m_PrefabInternal: {fileID: 2110512634}
+  m_PrefabInternal: {fileID: 2099043994}
   m_GameObject: {fileID: 904189439}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -12083,9 +12088,9 @@ MonoBehaviour:
   _track: {fileID: 833833056}
   _position:
     serializedVersion: 2
-    x: 166.50943
+    x: 154.056595
     y: 32
-    width: 815.89624
+    width: 754.877319
     height: 36
   colorIndex: 0
   _startTime: 1
@@ -12169,7 +12174,7 @@ MeshFilter:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100004, guid: c89db826f3be944fcb1e5d2cae3c5fe2, type: 2}
-  m_PrefabInternal: {fileID: 2110512634}
+  m_PrefabInternal: {fileID: 2099043994}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1228899567}
@@ -12186,7 +12191,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400004, guid: c89db826f3be944fcb1e5d2cae3c5fe2,
     type: 2}
-  m_PrefabInternal: {fileID: 2110512634}
+  m_PrefabInternal: {fileID: 2099043994}
   m_GameObject: {fileID: 1228899565}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12209,7 +12214,7 @@ MonoBehaviour:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400004, guid: c89db826f3be944fcb1e5d2cae3c5fe2, type: 2}
-  m_PrefabInternal: {fileID: 2110512634}
+  m_PrefabInternal: {fileID: 2099043994}
   m_GameObject: {fileID: 1228899565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -5}
@@ -12380,9 +12385,9 @@ MonoBehaviour:
   _track: {fileID: 833833055}
   _position:
     serializedVersion: 2
-    x: 1581.8396
+    x: 1463.5376
     y: 79.5
-    width: 166.509399
+    width: 154.056641
     height: 36
   colorIndex: 0
   _startTime: 9.5
@@ -12393,7 +12398,7 @@ MonoBehaviour:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100006, guid: c89db826f3be944fcb1e5d2cae3c5fe2, type: 2}
-  m_PrefabInternal: {fileID: 2110512634}
+  m_PrefabInternal: {fileID: 2099043994}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1351332345}
@@ -12409,7 +12414,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 400006, guid: c89db826f3be944fcb1e5d2cae3c5fe2, type: 2}
-  m_PrefabInternal: {fileID: 2110512634}
+  m_PrefabInternal: {fileID: 2099043994}
   m_GameObject: {fileID: 1351332344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: 0, z: 0}
@@ -12422,7 +12427,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400006, guid: c89db826f3be944fcb1e5d2cae3c5fe2,
     type: 2}
-  m_PrefabInternal: {fileID: 2110512634}
+  m_PrefabInternal: {fileID: 2099043994}
   m_GameObject: {fileID: 1351332344}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -12431,7 +12436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fsm:
     usedInTemplate: {fileID: 0}
-    name: FSM
+    name: Open/Close FSM
     startState: Idle
     states:
     - name: Idle
@@ -12439,8 +12444,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 58.5
-        y: 173
+        x: 57.5
+        y: 178
         width: 100
         height: 48
       isBreakpoint: 0
@@ -12506,8 +12511,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 410.5
-        y: 108
+        x: 246.5
+        y: 115
         width: 175
         height: 64
       isBreakpoint: 0
@@ -12669,8 +12674,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 413.5
-        y: 214
+        x: 249.5
+        y: 221
         width: 175
         height: 64
       isBreakpoint: 0
@@ -12861,7 +12866,19 @@ MonoBehaviour:
       objectVariables: []
       materialVariables: []
       textureVariables: []
-    description: 
+    description: '''GraspAperture provides a means to simulate sensors that detect
+      the opening and closing of the hand to drive a single dof gripper. The X position
+      of the game object is used to represent the aperture of the hand opening; it  varies
+      from 0 to 1. PseudoGraspAperture broadcasts a ''''Grasp Opening Detected''''
+      and a ''''Grasp Closing Detected'''' as long as each of those actions is ongoing.
+
+
+
+      In this simulated sensor, Open and Close actions can be triggered from the keyboard,
+      or they can be triggered by other game objects that send the ''''Open Hand''''
+      and  ''''Close Hand'''' messages. Sending the ''''Grasp Collision Detected''''
+      message to this object will halt an ongoing Opening or Closing operation, but
+      PseudoGraspAperture does not itself detect collisions. '''
     docUrl: 
     showStateLabel: 1
     maxLoopCount: 0
@@ -16157,9 +16174,9 @@ MonoBehaviour:
   _track: {fileID: 833833055}
   _position:
     serializedVersion: 2
-    x: 1082.31128
+    x: 1001.36786
     y: 79.5
-    width: 166.509399
+    width: 154.05658
     height: 36
   colorIndex: 0
   _startTime: 6.5
@@ -16256,7 +16273,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1001 &2110512634
+--- !u!1001 &2099043994
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2

@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fsm:
     usedInTemplate: {fileID: 0}
-    name: FSM
+    name: Raise/Lower Hand
     startState: State 4
     states:
     - name: State 4
@@ -137,7 +137,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 99
-        y: 104
+        y: 108
         width: 100
         height: 48
       isBreakpoint: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 159
-        y: 172
+        y: 176
         width: 100
         height: 32
       isBreakpoint: 0
@@ -308,7 +308,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 63
-        y: 232
+        y: 236
         width: 100
         height: 32
       isBreakpoint: 0
@@ -431,7 +431,11 @@ MonoBehaviour:
       objectVariables: []
       materialVariables: []
       textureVariables: []
-    description: 
+    description: 'This is a hack for the eVRS Orientation paradigms. We simulate the
+      movement of the 3D sensor attached to the hand with keyboard and mouse inputs.
+      This FSM adds a pre-programmed movement toward the center point or straight
+      down to a point outside the field of view: ''R'' to raise the arm, ''L'' to
+      lower it.'
     docUrl: 
     showStateLabel: 1
     maxLoopCount: 0
@@ -502,7 +506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fsm:
     usedInTemplate: {fileID: 0}
-    name: FSM
+    name: Open/Close FSM
     startState: Idle
     states:
     - name: Idle
@@ -510,8 +514,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 58.5
-        y: 173
+        x: 57.5
+        y: 178
         width: 100
         height: 48
       isBreakpoint: 0
@@ -577,8 +581,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 410.5
-        y: 108
+        x: 246.5
+        y: 115
         width: 175
         height: 64
       isBreakpoint: 0
@@ -740,8 +744,8 @@ MonoBehaviour:
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 413.5
-        y: 214
+        x: 249.5
+        y: 221
         width: 175
         height: 64
       isBreakpoint: 0
@@ -932,7 +936,19 @@ MonoBehaviour:
       objectVariables: []
       materialVariables: []
       textureVariables: []
-    description: 
+    description: '''GraspAperture provides a means to simulate sensors that detect
+      the opening and closing of the hand to drive a single dof gripper. The X position
+      of the game object is used to represent the aperture of the hand opening; it  varies
+      from 0 to 1. PseudoGraspAperture broadcasts a ''''Grasp Opening Detected''''
+      and a ''''Grasp Closing Detected'''' as long as each of those actions is ongoing.
+
+
+
+      In this simulated sensor, Open and Close actions can be triggered from the keyboard,
+      or they can be triggered by other game objects that send the ''''Open Hand''''
+      and  ''''Close Hand'''' messages. Sending the ''''Grasp Collision Detected''''
+      message to this object will halt an ongoing Opening or Closing operation, but
+      PseudoGraspAperture does not itself detect collisions. '''
     docUrl: 
     showStateLabel: 1
     maxLoopCount: 0
