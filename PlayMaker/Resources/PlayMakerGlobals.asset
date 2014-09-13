@@ -123,3 +123,5 @@ MonoBehaviour:
   - CloseHand
   - StartClosing
   - ContactMade
+  - CLose Hand
+  - Open Hand
