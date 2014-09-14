@@ -1279,9 +1279,9 @@ MonoBehaviour:
   fsm:
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: State 5
+    startState: Free
     states:
-    - name: State 4
+    - name: Contact
       description: 
       colorIndex: 0
       position:
@@ -1298,7 +1298,7 @@ MonoBehaviour:
           name: ContactLost
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 5
+        toState: Free
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1306,13 +1306,15 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetMaterialColor
         - HutongGames.PlayMaker.Actions.TriggerEvent
+        - HutongGames.PlayMaker.Actions.CybergloveVibrateFinger
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000006000000
-        actionHashCodes: 3ff43992e0558823
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 00000000060000000a000000
+        actionHashCodes: 3ff43992e055882309a1d610
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1358,12 +1360,12 @@ MonoBehaviour:
           typeName: 
           value: {fileID: 0}
         fsmVarParams: []
-        byteData: 000000000086ec253fe4e6083deda2303d0000803f000002000000436f6e746163744c6f7374
+        byteData: 000000000086ec253fe4e6083deda2303d0000803f000002000000436f6e746163744c6f73740000803f0100000001
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000100000002000000012000000190000000100000007000000120000001700000013000000
+        paramDataType: 14000000100000002000000012000000190000000100000007000000120000001700000013000000020000000700000001000000
         paramName:
         - gameObject
         - materialIndex
@@ -1375,9 +1377,12 @@ MonoBehaviour:
         - collideTag
         - sendEvent
         - storeCollider
-        paramDataPos: 00000000000000000000000000000000050000001600000017000000010000001b00000000000000
-        paramByteDataSize: 00000000050000000000000000000000110000000100000004000000000000000b00000000000000
-    - name: State 5
+        - force
+        - finger
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000050000001600000017000000010000001b00000000000000260000002a0000002e000000
+        paramByteDataSize: 00000000050000000000000000000000110000000100000004000000000000000b00000000000000040000000400000001000000
+    - name: Free
       description: 
       colorIndex: 0
       position:
@@ -1394,7 +1399,7 @@ MonoBehaviour:
           name: ContactMade
           isSystemEvent: 0
           isGlobal: 1
-        toState: State 4
+        toState: Contact
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1402,7 +1407,7 @@ MonoBehaviour:
           name: ContactKept
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 4
+        toState: Contact
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1573,9 +1578,9 @@ MonoBehaviour:
   fsm:
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: State 5
+    startState: Free
     states:
-    - name: State 4
+    - name: Contact
       description: 
       colorIndex: 0
       position:
@@ -1592,7 +1597,7 @@ MonoBehaviour:
           name: ContactLost
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 5
+        toState: Free
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1600,13 +1605,15 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetMaterialColor
         - HutongGames.PlayMaker.Actions.TriggerEvent
+        - HutongGames.PlayMaker.Actions.CybergloveVibrateFinger
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000006000000
-        actionHashCodes: 3ff43992e0558823
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 00000000060000000a000000
+        actionHashCodes: 3ff43992e055882309a1d610
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1652,12 +1659,12 @@ MonoBehaviour:
           typeName: 
           value: {fileID: 0}
         fsmVarParams: []
-        byteData: 000000000086ec253fe4e6083deda2303d0000803f000002000000436f6e746163744c6f7374
+        byteData: 000000000086ec253fe4e6083deda2303d0000803f000002000000436f6e746163744c6f73740000803f0300000001
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000100000002000000012000000190000000100000007000000120000001700000013000000
+        paramDataType: 14000000100000002000000012000000190000000100000007000000120000001700000013000000020000000700000001000000
         paramName:
         - gameObject
         - materialIndex
@@ -1669,9 +1676,12 @@ MonoBehaviour:
         - collideTag
         - sendEvent
         - storeCollider
-        paramDataPos: 00000000000000000000000000000000050000001600000017000000010000001b00000000000000
-        paramByteDataSize: 00000000050000000000000000000000110000000100000004000000000000000b00000000000000
-    - name: State 5
+        - force
+        - finger
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000050000001600000017000000010000001b00000000000000260000002a0000002e000000
+        paramByteDataSize: 00000000050000000000000000000000110000000100000004000000000000000b00000000000000040000000400000001000000
+    - name: Free
       description: 
       colorIndex: 0
       position:
@@ -1688,7 +1698,7 @@ MonoBehaviour:
           name: ContactMade
           isSystemEvent: 0
           isGlobal: 1
-        toState: State 4
+        toState: Contact
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1696,7 +1706,7 @@ MonoBehaviour:
           name: ContactKept
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 4
+        toState: Contact
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1867,9 +1877,9 @@ MonoBehaviour:
   fsm:
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: State 5
+    startState: Free
     states:
-    - name: State 4
+    - name: Contact
       description: 
       colorIndex: 0
       position:
@@ -1886,7 +1896,7 @@ MonoBehaviour:
           name: ContactLost
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 5
+        toState: Free
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -1895,14 +1905,16 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.SetMaterialColor
         - HutongGames.PlayMaker.Actions.TriggerEvent
         - HutongGames.PlayMaker.Actions.SendEvent
+        - HutongGames.PlayMaker.Actions.CybergloveVibrateFinger
         customNames:
         - 
         - 
         - 
-        actionEnabled: 010101
-        actionIsOpen: 010101
-        actionStartIndex: 00000000060000000a000000
-        actionHashCodes: 3ff43992e0558823eec9d968
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000060000000a0000000e000000
+        actionHashCodes: 3ff43992e0558823eec9d96809a1d610
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -1980,12 +1992,12 @@ MonoBehaviour:
           typeName: 
           value: {fileID: 0}
         fsmVarParams: []
-        byteData: 000000000086ec253fe4e6083deda2303d0000803f000002000000436f6e746163744c6f7374477261737020436f6c6c6973696f6e204465746563746564000000000000
+        byteData: 000000000086ec253fe4e6083deda2303d0000803f000002000000436f6e746163744c6f7374477261737020436f6c6c6973696f6e2044657465637465640000000000000000803f0000000001
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001000000020000000120000001900000001000000070000001200000017000000130000001f000000170000000f00000001000000
+        paramDataType: 140000001000000020000000120000001900000001000000070000001200000017000000130000001f000000170000000f00000001000000020000000700000001000000
         paramName:
         - gameObject
         - materialIndex
@@ -2001,9 +2013,12 @@ MonoBehaviour:
         - sendEvent
         - delay
         - everyFrame
-        paramDataPos: 00000000000000000000000000000000050000001600000017000000010000001b0000000000000000000000260000003e00000043000000
-        paramByteDataSize: 00000000050000000000000000000000110000000100000004000000000000000b0000000000000000000000180000000500000001000000
-    - name: State 5
+        - force
+        - finger
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000050000001600000017000000010000001b0000000000000000000000260000003e0000004300000044000000480000004c000000
+        paramByteDataSize: 00000000050000000000000000000000110000000100000004000000000000000b0000000000000000000000180000000500000001000000040000000400000001000000
+    - name: Free
       description: 
       colorIndex: 0
       position:
@@ -2020,7 +2035,7 @@ MonoBehaviour:
           name: ContactMade
           isSystemEvent: 0
           isGlobal: 1
-        toState: State 4
+        toState: Contact
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2028,7 +2043,7 @@ MonoBehaviour:
           name: ContactKept
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 4
+        toState: Contact
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2458,9 +2473,9 @@ MonoBehaviour:
   fsm:
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: State 5
+    startState: Free
     states:
-    - name: State 4
+    - name: Contact
       description: 
       colorIndex: 0
       position:
@@ -2477,7 +2492,7 @@ MonoBehaviour:
           name: ContactLost
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 5
+        toState: Free
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2485,13 +2500,15 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetMaterialColor
         - HutongGames.PlayMaker.Actions.TriggerEvent
+        - HutongGames.PlayMaker.Actions.CybergloveVibrateFinger
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000006000000
-        actionHashCodes: 3ff43992e0558823
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 00000000060000000a000000
+        actionHashCodes: 3ff43992e055882309a1d610
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -2537,12 +2554,12 @@ MonoBehaviour:
           typeName: 
           value: {fileID: 0}
         fsmVarParams: []
-        byteData: 000000000086ec253fe4e6083deda2303d0000803f000002000000436f6e746163744c6f7374
+        byteData: 000000000086ec253fe4e6083deda2303d0000803f000002000000436f6e746163744c6f73740000803f0200000001
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000100000002000000012000000190000000100000007000000120000001700000013000000
+        paramDataType: 14000000100000002000000012000000190000000100000007000000120000001700000013000000020000000700000001000000
         paramName:
         - gameObject
         - materialIndex
@@ -2554,9 +2571,12 @@ MonoBehaviour:
         - collideTag
         - sendEvent
         - storeCollider
-        paramDataPos: 00000000000000000000000000000000050000001600000017000000010000001b00000000000000
-        paramByteDataSize: 00000000050000000000000000000000110000000100000004000000000000000b00000000000000
-    - name: State 5
+        - force
+        - finger
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000050000001600000017000000010000001b00000000000000260000002a0000002e000000
+        paramByteDataSize: 00000000050000000000000000000000110000000100000004000000000000000b00000000000000040000000400000001000000
+    - name: Free
       description: 
       colorIndex: 0
       position:
@@ -2573,7 +2593,7 @@ MonoBehaviour:
           name: ContactMade
           isSystemEvent: 0
           isGlobal: 1
-        toState: State 4
+        toState: Contact
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2581,7 +2601,7 @@ MonoBehaviour:
           name: ContactKept
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 4
+        toState: Contact
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2752,9 +2772,9 @@ MonoBehaviour:
   fsm:
     usedInTemplate: {fileID: 0}
     name: FSM
-    startState: State 5
+    startState: Free
     states:
-    - name: State 4
+    - name: Contact
       description: 
       colorIndex: 0
       position:
@@ -2771,7 +2791,7 @@ MonoBehaviour:
           name: ContactLost
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 5
+        toState: Free
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2779,13 +2799,15 @@ MonoBehaviour:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetMaterialColor
         - HutongGames.PlayMaker.Actions.TriggerEvent
+        - HutongGames.PlayMaker.Actions.CybergloveVibrateFinger
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 0000000006000000
-        actionHashCodes: 3ff43992e0558823
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 00000000060000000a000000
+        actionHashCodes: 3ff43992e055882309a1d610
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -2831,12 +2853,12 @@ MonoBehaviour:
           typeName: 
           value: {fileID: 0}
         fsmVarParams: []
-        byteData: 000000000086ec253fe4e6083deda2303d0000803f000002000000436f6e746163744c6f7374
+        byteData: 000000000086ec253fe4e6083deda2303d0000803f000002000000436f6e746163744c6f73740000803f0400000001
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000100000002000000012000000190000000100000007000000120000001700000013000000
+        paramDataType: 14000000100000002000000012000000190000000100000007000000120000001700000013000000020000000700000001000000
         paramName:
         - gameObject
         - materialIndex
@@ -2848,9 +2870,12 @@ MonoBehaviour:
         - collideTag
         - sendEvent
         - storeCollider
-        paramDataPos: 00000000000000000000000000000000050000001600000017000000010000001b00000000000000
-        paramByteDataSize: 00000000050000000000000000000000110000000100000004000000000000000b00000000000000
-    - name: State 5
+        - force
+        - finger
+        - everyFrame
+        paramDataPos: 00000000000000000000000000000000050000001600000017000000010000001b00000000000000260000002a0000002e000000
+        paramByteDataSize: 00000000050000000000000000000000110000000100000004000000000000000b00000000000000040000000400000001000000
+    - name: Free
       description: 
       colorIndex: 0
       position:
@@ -2867,7 +2892,7 @@ MonoBehaviour:
           name: ContactMade
           isSystemEvent: 0
           isGlobal: 1
-        toState: State 4
+        toState: Contact
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2875,7 +2900,7 @@ MonoBehaviour:
           name: ContactKept
           isSystemEvent: 0
           isGlobal: 0
-        toState: State 4
+        toState: Contact
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
