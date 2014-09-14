@@ -14,26 +14,21 @@ namespace HutongGames.PlayMaker.Actions
 		public Finger finger;
 		public bool everyFrame;
 		
-		private string fingerName;
+		private string indicatorObjectName;
 		private FsmGameObject indicatorObject;
-		private string handObjectName;
+		private string fingerName;
 		
 		public override void Reset()
 		{
-			handObjectName = "TouchStimuli";
-			indicatorObject = GameObject.Find ( handObjectName );
+			// Find the object by name, so that we don't have to reconnect each time the prefab is used.
+			indicatorObjectName = "Touch Stimuli Indicator";
+			indicatorObject = GameObject.Find ( indicatorObjectName );
 			everyFrame = true;
 		}
 		
 		public override void OnEnter()
 		{
-			if ( finger == Finger.Thumb ) fingerName = "Thumb";
-			if ( finger == Finger.Index ) fingerName = "Index";
-			if ( finger == Finger.Middle ) fingerName = "Middle";
-			if ( finger == Finger.Ring ) fingerName = "Ring";
-			if ( finger == Finger.Pinky ) fingerName = "Pinky";
-			if ( finger == Finger.Palm ) fingerName = "Palm";
-			
+			fingerName = finger.ToString();			
 			var fingerObject = indicatorObject.Value.transform.FindChild (fingerName);
 			if ( force > 0.5f ) fingerObject.renderer.material.SetColor ( "_Color", Color.magenta );
 			else fingerObject.renderer.material.SetColor ( "_Color", Color.gray );
@@ -41,8 +36,13 @@ namespace HutongGames.PlayMaker.Actions
 		}
 		public override void OnExit()
 		{
-			var fingerObject = indicatorObject.Value.transform.FindChild (fingerName);
-			fingerObject.renderer.material.SetColor ( "_Color", Color.gray );
+		
+			// This works fine if one exits the state that started the vibration.
+			// But if one exits the state by stopping the Unity player, one gets an error about a GameObject that has been destroyed.
+			if ( indicatorObject != null ) {
+				var fingerObject = indicatorObject.Value.transform.FindChild (fingerName);
+				if ( fingerObject != null ) fingerObject.renderer.material.SetColor ( "_Color", Color.gray );
+			}
 		}
 		
 		

@@ -18,7 +18,7 @@ namespace HutongGames.PlayMaker.Actions
 		
 		public override void Reset()
 		{
-			handObjectName = "TouchStimuli";
+			handObjectName = "Touch Stimuli Indicator";
 			indicatorObject = GameObject.Find ( handObjectName );
 		}
 		

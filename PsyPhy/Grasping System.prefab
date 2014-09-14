@@ -2214,15 +2214,9 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 15a48f3c
+        actionHashCodes: a082e3f4
         unityObjectParams: []
-        fsmGameObjectParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
+        fsmGameObjectParams: []
         fsmOwnerDefaultParams:
         - ownerOption: 0
           gameObject:
@@ -2241,19 +2235,19 @@ MonoBehaviour:
         fsmStringParams: []
         fsmObjectParams: []
         fsmVarParams: []
-        byteData: 0101
+        byteData: 5652504e50736575646f20310101
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 14000000130000000100000001000000
+        paramDataType: 14000000030000000100000001000000
         paramName:
         - gameObject
-        - vrpnObject
+        - vrpnObjectName
         - DrivePosition
         - DriveRotation
-        paramDataPos: 00000000000000000000000001000000
-        paramByteDataSize: 00000000000000000100000001000000
+        paramDataPos: 00000000000000000c0000000d000000
+        paramByteDataSize: 000000000c0000000100000001000000
     events: []
     globalTransitions: []
     variables:
@@ -2299,13 +2293,14 @@ MonoBehaviour:
     startState: Drive with GraspAperture
     states:
     - name: Drive with GraspAperture
-      description: 
+      description: "Sets the opening of the virtual hand \nbased on an input from
+        a real or virtual grip \naperture sensor."
       colorIndex: 0
       position:
         serializedVersion: 2
         x: 50
         y: 100
-        width: 178
+        width: 236.5
         height: 16
       isBreakpoint: 0
       isSequence: 0
@@ -2313,6 +2308,7 @@ MonoBehaviour:
       transitions: []
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.FindGameObject
         - HutongGames.PlayMaker.Actions.GetPosition
         - HutongGames.PlayMaker.Actions.FloatMultiply
         - HutongGames.PlayMaker.Actions.SetPosition
@@ -2324,17 +2320,24 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0100000000
-        actionStartIndex: 00000000070000000a0000001200000015000000
-        actionHashCodes: a290608e79fc1ded8b80e9a579fc1ded8b80e9a5
+        - 
+        actionEnabled: 010101010101
+        actionIsOpen: 010100000000
+        actionStartIndex: 00000000030000000a0000000d0000001500000018000000
+        actionHashCodes: c54a778fa290608e79fc1ded8b80e9a579fc1ded8b80e9a5
         unityObjectParams: []
-        fsmGameObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: GraspApertureObject
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
         fsmOwnerDefaultParams:
         - ownerOption: 1
           gameObject:
-            useVariable: 0
-            name: 
+            useVariable: 1
+            name: GraspApertureObject
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -2361,7 +2364,19 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: GraspAperture
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Untagged
         fsmObjectParams: []
         fsmVarParams: []
         byteData: 000000000000000000000000010000000001477261737020417065727475726500000000010000000001000000000100000000014772617370204170657274757265cdcccc3d000100000000000000000000000001000000000147726173702041706572747572650000000001000000000101000000010000000000014772617370204170657274757265000080bf0001000000000000000000000000010000000001477261737020417065727475726500000000010000000001010000000100
@@ -2369,8 +2384,11 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001c0000000f0000000f0000000f00000007000000010000000f0000000f00000001000000140000001c0000000f0000000f0000000f0000000700000001000000010000000f0000000f00000001000000140000001c0000000f0000000f0000000f000000070000000100000001000000
+        paramDataType: 120000001200000013000000140000001c0000000f0000000f0000000f00000007000000010000000f0000000f00000001000000140000001c0000000f0000000f0000000f0000000700000001000000010000000f0000000f00000001000000140000001c0000000f0000000f0000000f000000070000000100000001000000
         paramName:
+        - objectName
+        - withTag
+        - store
         - gameObject
         - vector
         - x
@@ -2400,8 +2418,8 @@ MonoBehaviour:
         - space
         - everyFrame
         - lateUpdate
-        paramDataPos: 00000000000000000d00000020000000250000002a0000002e0000002f0000004200000047000000010000004800000055000000680000006d000000720000007600000077000000780000008b0000009000000002000000910000009e000000b1000000b6000000bb000000bf000000c0000000
-        paramByteDataSize: 000000000d0000001300000005000000050000000400000001000000130000000500000001000000000000000d000000130000000500000005000000040000000100000001000000130000000500000001000000000000000d000000130000000500000005000000040000000100000001000000
+        paramDataPos: 00000000010000000000000000000000000000000d00000020000000250000002a0000002e0000002f0000004200000047000000010000004800000055000000680000006d000000720000007600000077000000780000008b0000009000000002000000910000009e000000b1000000b6000000bb000000bf000000c0000000
+        paramByteDataSize: 000000000000000000000000000000000d0000001300000005000000050000000400000001000000130000000500000001000000000000000d000000130000000500000005000000040000000100000001000000130000000500000001000000000000000d000000130000000500000005000000040000000100000001000000
     events: []
     globalTransitions: []
     variables:
@@ -2420,7 +2438,13 @@ MonoBehaviour:
       colorVariables: []
       rectVariables: []
       quaternionVariables: []
-      gameObjectVariables: []
+      gameObjectVariables:
+      - useVariable: 1
+        name: GraspApertureObject
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
       objectVariables: []
       materialVariables: []
       textureVariables: []

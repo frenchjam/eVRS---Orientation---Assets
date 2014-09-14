@@ -13,29 +13,31 @@ namespace HutongGames.PlayMaker.Actions
 		public FsmOwnerDefault gameObject;
 
 		[RequiredField]
-		[Tooltip("The object that simulates the VRPN input.")]
-		public FsmGameObject vrpnObject;
-
+		[Tooltip("The name of the object that simulates the VRPN input.")]
+		public string vrpnObjectName;
+		private FsmGameObject vrpnObject;
+		
 		public bool DrivePosition;
 		public bool DriveRotation;
 
 		public override void Reset()
 		{
 			gameObject = null;
-			vrpnObject = null;
+			vrpnObject = null;			
 		}
 
 		public override void OnEnter()
 		{
-			DoSetRotation();
+			vrpnObject = GameObject.Find ( vrpnObjectName );
+			DoSetTransformation();
 		}
 
 		public override void OnUpdate()
 		{
-			DoSetRotation();
+			DoSetTransformation();
 		}
 
-		void DoSetRotation()
+		void DoSetTransformation()
 		{
 			var go = Fsm.GetOwnerDefaultTarget(gameObject);
 			if (go == null)
